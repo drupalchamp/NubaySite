@@ -1,0 +1,38 @@
+*~
+*.orig
+
+# Ignore configuration files that may contain sensitive information.
+sites/default/*settings.php*
+sites/default/*.preLoad
+
+# Ignore paths that contain user-generated content.
+sites/default/private
+sites/*
+!sites/all
+!sites/default
+!sites/*.php
+!sites/*.txt
+sites/default/*
+!sites/default/files
+sites/default/files/*
+!sites/default/files/.htaccess
+!sites/default/files/adaptivetheme
+
+# Isolate the specific parts of sites/default/files/civicrm that we want to track
+!sites/default/files/civicrm
+sites/default/files/civicrm/*
+
+!sites/default/files/civicrm/persist
+sites/default/files/civicrm/persist/contribute
+
+!sites/default/files/civicrm/ext
+sites/default/files/civicrm/ext/cache
+
+!sites/default/files/civicrm/custom
+sites/default/files/civicrm/custom/*
+!sites/default/files/civicrm/custom/custom_ext
+sites/default/files/civicrm/custom/custom_ext/cache
+
+# Ignore phpmyadmin install
+phpMyAdmin*
+
