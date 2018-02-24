@@ -1,0 +1,13 @@
+/* Add any valid CSS declarations */
+
+.view-slideshow .slideshow_content {
+    width: 188px;
+    padding: 20px 26px;
+    position: absolute;
+    top: 72px;
+    left: 50px;
+    /*text-align: center;*/
+    z-index: 11;
+    background: #231f20;
+    opacity: .9;
+}
