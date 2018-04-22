@@ -33,6 +33,6 @@ sites/default/files/civicrm/custom/*
 !sites/default/files/civicrm/custom/custom_ext
 sites/default/files/civicrm/custom/custom_ext/cache
 
-# Ignore phpmyadmin install
+# Ignore 3rd party software if present
 phpMyAdmin*
-
+Search-Replace-DB*
