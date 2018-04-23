@@ -1,9 +1,9 @@
 *~
 *.orig
-*.csv
-*.json
-*.make
-*.tar
+/*.csv
+/*.json
+/*.make
+/*.tar
 
 # Ignore configuration files that may contain sensitive information.
 sites/default/*settings.php*
