@@ -1,0 +1,49 @@
+name = Women's Bar Association
+description = A Women's Bar Association theme.
+core = 7.x
+
+; Regions
+
+regions[wbf_logo_area]							= 'WBF Logo Area'
+regions[header_right]             				= 'Header Right'
+regions[header_right_wbf]						= 'WBF Header Right'
+regions[menu_area]             					= 'Menu Area'
+regions[menu_area_wbf]							= 'WBF Menu Area'
+regions[login_menu_area]						= 'Member Login Menu Area'
+regions[slide_show_area]             		 	= 'Slideshow Area'
+
+regions[front_content_left]             		= 'Front Left Area'
+regions[front_content_middle]             		= 'Front Middle Area'
+
+regions[sidebar_first]             				= 'Left Area'
+
+regions[upper_content]             				= 'Upper Content Area'
+regions[content_top]             				= 'Contant Top Area'
+regions[content]             					= 'Content Area'
+regions[content_bottom]             			= 'Content Bottom Area'
+
+regions[mid_right]             			        = 'Mid right area'
+
+regions[sidebar_second]             			= 'Right Area'
+regions[sidebar_second_wbf] 					= 'WBF Right Area'
+
+
+regions[footer_left_area]             			= 'Footer Left Area'
+regions[footer_right_area]             			= 'Footer Right Area'
+
+regions[landing_page_banner]             		= 'Landing Page Banner Area'
+regions[landing_page_content]             		= 'Landing Page Content Area'
+
+
+
+; Stylesheets
+
+stylesheets[all][]                 = css/style.css
+stylesheets[all][]                 = css/themes.css
+stylesheets[all][]                 = css/superfish-menu.css
+
+
+
+scripts[] = js/miscellaneous.js
+scripts[] = js/jquery.simplemodal.js
+

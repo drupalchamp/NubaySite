@@ -1,0 +1,52 @@
+name = Women's Bar Association
+description = A Women's Bar Association theme.
+core = 7.x
+
+; Regions
+
+
+regions[user_menu]             			= 'User Menu Area'
+
+regions[banner_slide]           		= 'Banner Slide Area'
+
+regions[search_area_left]              	= 'Search Area Left'
+regions[search_area_right]              = 'Search Area Right'
+
+regions[banner_image]					= 'Banner Area'
+
+regions[upper_content]				    = 'Upper Content Area'
+regions[content_top_area]				= 'Content Top Area'
+regions[content_middle_area]			= 'Content Middle Area'
+regions[content_bottom_area]			= 'Content Bottom Area'
+
+
+regions[sidebar_first]            		= 'Left Sidebar'
+regions[sidebar_second]            		= 'Right Sidebar'
+
+regions[content]                  		= 'Content Area'
+
+regions[footer_first]                	= 'Footer first Area'
+regions[footer_second]                	= 'Footer Second Area'
+regions[footer_third]                	= 'Footer Third Area'
+regions[footer_fourth]                	= 'Footer Fourth Area'
+
+regions[footer_area_bottom]             = 'Footer Area Bottom'
+
+
+; Stylesheets
+
+stylesheets[all][]                 = css/style.css
+stylesheets[all][]                 = css/themes.css
+stylesheets[all][]                 = css/user1.css
+stylesheets[all][]                 = css/user2.css
+stylesheets[all][]                 = css/user3.css
+stylesheets[all][]                 = css/user4.css
+stylesheets[all][]                 = css/user5.css
+stylesheets[all][]                 = css/follow_my_order_add.css
+stylesheets[all][]                 = css/industrial_design_add.css
+stylesheets[all][]                 = css/new_project_add.css
+
+scripts[] = js/show_hide.js
+scripts[] = js/miscellaneous.js
+scripts[] = js/jquery.simplemodal.js
+

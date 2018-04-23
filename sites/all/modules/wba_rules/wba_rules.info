@@ -1,0 +1,3 @@
+name = WBA Rules module
+description = A module use to add custom rules.
+core = 7.x

@@ -64,6 +64,7 @@ require_once 'api/api.php';
  * @property string $defaultContactStateProvince
  * @property string $monetaryDecimalPoint
  * @property string $monetaryThousandSeparator
+ * @property array fiscalYearStart
  */
 class CRM_Core_Config extends CRM_Core_Config_MagicMerge {
 
@@ -566,6 +567,26 @@ class CRM_Core_Config extends CRM_Core_Config_MagicMerge {
     // OK, this looks new.
     Civi::service('dispatcher')->dispatch(\Civi\Core\Event\SystemInstallEvent::EVENT_NAME, new \Civi\Core\Event\SystemInstallEvent());
     Civi::settings()->set('installed', 1);
+  }
+
+  /**
+   * Is the system permitted to flush caches at the moment.
+   */
+  static public function isPermitCacheFlushMode() {
+    return !CRM_Core_Config::singleton()->doNotResetCache;
+  }
+
+  /**
+   * Set cache clearing to enabled or disabled.
+   *
+   * This might be enabled at the start of a long running process
+   * such as an import in order to delay clearing caches until the end.
+   *
+   * @param bool $enabled
+   *   If true then caches can be cleared at this time.
+   */
+  static public function setPermitCacheFlushMode($enabled) {
+    CRM_Core_Config::singleton()->doNotResetCache = $enabled ? 0 : 1;
   }
 
 }

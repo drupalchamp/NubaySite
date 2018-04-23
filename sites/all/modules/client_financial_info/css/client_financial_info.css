@@ -1,0 +1,56 @@
+#webform-client-form-1437 .webform-component--current-income,
+#webform-client-form-1437 .webform-component--occupation,
+#webform-client-form-1437 .webform-component--employer{
+  overflow: hidden;
+}
+#webform-client-form-1437 .webform-component--current-income{
+  float: left;
+  width: 69%;
+}
+#webform-client-form-1437 .current_income_options {
+    float: left;
+    margin-left: -210px;
+    width: 135px;
+}
+#webform-client-form-1437  .panel-default {
+  overflow: hidden;
+  width: 61%;
+}
+
+#webform-client-form-1437 .webform-component--currently-employed > .control-label,
+#webform-client-form-1437 .webform-component--occupation > .control-label,
+#webform-client-form-1437 .webform-component--employer >.control-label{
+  width: 21%;
+  float: left;
+}
+#webform-client-form-1437 .webform-component--current-income > .control-label{
+  width: 30%;
+  display:inline-block;
+  vertical-align: middle;
+}
+#webform-client-form-1437 .webform-component--current-income > #edit-submitted-current-income,
+#webform-client-form-1437 .webform-component--occupation > #edit-submitted-occupation,
+#webform-client-form-1437 .webform-component--employer > #edit-submitted-employer{
+  width: 40%;
+  vertical-align: middle;
+  display: inline-block;
+}
+#webform-client-form-1437 .webform-component--current-income > #edit-submitted-current-income{
+  width: 36%;
+}
+
+#webform-client-form-1437 .webform-container-inline label {
+  display: inline;
+  margin-right: 0px !important;
+}
+
+/*total from above*/
+#webform-client-form-1437 .webform-component--other-income-options--total-from-above-option {
+  float: right;
+  margin-top: 18px;
+  width: 48%;
+}
+#webform-client-form-1437 .webform-component--other-income-options--total-from-above {
+  float: left;
+  width: 51%;
+}

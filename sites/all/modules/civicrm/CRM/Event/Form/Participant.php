@@ -645,8 +645,8 @@ class CRM_Event_Form_Participant extends CRM_Contribute_Form_AbstractEditPayment
     if ($this->_mode) {
       // exclude events which are not monetary when credit card registration is used
       $eventFieldParams['api']['params']['is_monetary'] = 1;
-      $this->add('select', 'payment_processor_id', ts('Payment Processor'), $this->_processors, TRUE);
     }
+    $this->addPaymentProcessorSelect(TRUE, FALSE, FALSE);
 
     $element = $this->addEntityRef('event_id', ts('Event'), $eventFieldParams, TRUE);
 
@@ -1029,6 +1029,9 @@ class CRM_Event_Form_Participant extends CRM_Contribute_Form_AbstractEditPayment
 
         //lets carry currency, CRM-4453
         $params['fee_currency'] = $config->defaultCurrency;
+        if (!isset($lineItem[0])) {
+          $lineItem[0] = array();
+        }
         CRM_Price_BAO_PriceSet::processAmount($this->_values['fee'],
           $params, $lineItem[0]
         );
@@ -1532,7 +1535,7 @@ class CRM_Event_Form_Participant extends CRM_Contribute_Form_AbstractEditPayment
       $this->assign('module', 'Event Registration');
       //use of the message template below requires variables in different format
       $event = $events = array();
-      $returnProperties = array('fee_label', 'start_date', 'end_date', 'is_show_location', 'title');
+      $returnProperties = array('event_type_id', 'fee_label', 'start_date', 'end_date', 'is_show_location', 'title');
 
       //get all event details.
       CRM_Core_DAO::commonRetrieveAll('CRM_Event_DAO_Event', 'id', $params['event_id'], $events, $returnProperties);
@@ -1666,7 +1669,7 @@ class CRM_Event_Form_Participant extends CRM_Contribute_Form_AbstractEditPayment
           //add dataArray in the receipts in ADD and UPDATE condition
           $dataArray = array();
           if ($this->_action & CRM_Core_Action::ADD) {
-            $line = $lineItem[0];
+            $line = isset($lineItem[0]) ? $lineItem[0] : array();
           }
           elseif ($this->_action & CRM_Core_Action::UPDATE) {
             $line = $this->_values['line_items'];

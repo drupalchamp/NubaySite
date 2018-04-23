@@ -1,0 +1,4 @@
+name = custom module
+description = A module use to add cancel button.
+core = 7.x
+

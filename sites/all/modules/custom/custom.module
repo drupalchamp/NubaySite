@@ -1,0 +1,255 @@
+<?php
+
+function custom_form_alter(&$form, &$form_state, $form_id) {
+
+
+  
+ if($form_id == 'comment_node_forum_form') { 
+   $link = l(t('Cancel'), '',array('fragment' => 'midcontent', 'external' => TRUE, 'attributes' => array('class' => 'cancel_btn')));
+   $form['markup'] = array(
+                 //This is the text you want to add to the form, using the t() function allows it to be translatable
+                '#markup' => $link,
+                //By making the weight 20 we insure that it appears at the bottom of the form
+                '#weight' => 23,
+        );
+
+ }
+
+  if($form_id == 'forum_node_form') { 
+    global $user;
+    $user_fields = user_load($user->uid);
+    $uids = array_keys($user_fields->roles);
+    if (!in_array('3', $uids) || !in_array('4', $uids)){
+      $max = sizeof($user_fields->og_user_node['und']);
+      if(!empty($max)){
+      $nids = array();
+        for($i=0;$i<$max; $i++){
+          $node = node_load($user_fields->og_user_node['und'][$i]['target_id']);
+          $nids[] =  $node->nid;
+        }
+      }
+    
+    $query = db_select('taxonomy_term_data', 'tid');
+    $query->fields('tid', array('tid','name'));
+    $query->innerJoin('og_membership', 'og', 'og.etid = tid.tid');
+    $query->condition('og.entity_type', 'taxonomy_term', '=');
+    $query->leftjoin('taxonomy_vocabulary', 'tv', 'tv.vid = tid.vid');
+    $query->leftjoin('taxonomy_term_hierarchy', 'tth', 'tth.tid = tid.tid');
+    $query->condition('og.gid', @$nids, 'IN');
+    $query->condition('tv.machine_name', 'forums', '=');
+    $result = $query->execute();
+    
+    $forum_list = array();
+    if(arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'forum' && is_numeric(arg(3))){
+      $url_tid = arg(3);
+    }
+
+    foreach($result as $value){
+      if(!empty($url_tid)){
+        if($value->tid == $url_tid){
+          $forum_list[$value->tid] = '-'.$value->name;
+        }
+      }else{
+          $forum_list[$value->tid] = '-'.$value->name;
+      }
+    }
+
+    if(empty($forum_list)){
+      drupal_goto('node/342');
+    }
+
+    $form['taxonomy_forums']['und']['#options'] = $forum_list;
+
+   }
+  }
+
+
+
+  if($form_id == 'comment_node_forum_form') { 
+
+    //$form['#submit'][] = 'comment_node_custom_submit';
+  }
+
+
+  if($form_id == 'views_form_committee_members_page_2'){
+
+   $form['options']['follow'] = array(
+    '#type' => 'submit',
+    '#value' => t('Follow Committee'),
+    '#validate' => array('follow_group_node_validate'),
+    '#submit' => array('follow_group_node_submit'),
+   );
+
+   $form['options']['unfollow'] = array(
+    '#type' => 'submit',
+    '#value' => t('Unfollow Committee'),
+    '#validate' => array('unfollow_group_node_validate'),
+    '#submit' => array('unfollow_group_node_submit'),
+   );
+
+  }
+
+
+}
+
+
+/**
+ * validate follow.
+ */
+function follow_group_node_validate($form, &$form_state) {
+$selected_nodes = array();
+$form_state['values']['entityreference_view_widget'] = array_filter($form_state['values']['entityreference_view_widget']);
+$selected_nodes = $form_state['values']['entityreference_view_widget'];
+
+  if(empty($selected_nodes)){
+     form_set_error('entityreference_view_widget', t('Please select at least one user.'));
+  }
+  $gid = arg(1);
+  $flag = flag_get_flag('follow_node');
+  foreach($selected_nodes as $users){
+     if ($flag && $flag->is_flagged($gid, $users)) {
+	  form_set_error('entityreference_view_widget', t('Some user you have selected has already follow this group.'));
+     }
+  }
+}
+
+
+
+/**
+ * submit follow.
+ */
+function follow_group_node_submit($form, &$form_state) {
+$selected_nodes = array();
+$form_state['values']['entityreference_view_widget'] = array_filter($form_state['values']['entityreference_view_widget']);
+$selected_nodes = $form_state['values']['entityreference_view_widget'];
+
+  $gid = arg(1);
+  foreach($selected_nodes as $users){
+    $flag = flag_get_flag('follow_node');
+    $flag->flag('flag', $gid, user_load($users), TRUE);
+ }
+ drupal_set_message('The selected users has follow this group successfully.');
+
+}
+
+
+
+/**
+ * validate unfollow.
+ */
+function unfollow_group_node_validate($form, &$form_state) {
+$selected_nodes = array();
+$form_state['values']['entityreference_view_widget'] = array_filter($form_state['values']['entityreference_view_widget']);
+$selected_nodes = $form_state['values']['entityreference_view_widget'];
+
+  if(empty($selected_nodes)){
+     form_set_error('entityreference_view_widget', t('Please select at least one user.'));
+  }
+  $gid = arg(1);
+  $flag = flag_get_flag('follow_node');
+  foreach($selected_nodes as $users){
+     if ($flag && $flag->is_flagged($gid, $users)) {
+     }else{
+       form_set_error('entityreference_view_widget', t('Some user you have selected has already unfollow this group.'));
+     }
+  }
+}
+
+
+/**
+ * submit unfollow.
+ */
+function unfollow_group_node_submit($form, &$form_state) {
+$selected_nodes = array();
+$form_state['values']['entityreference_view_widget'] = array_filter($form_state['values']['entityreference_view_widget']);
+$selected_nodes = $form_state['values']['entityreference_view_widget'];
+
+  $gid = arg(1);
+  foreach($selected_nodes as $users){
+    $flag = flag_get_flag('follow_node');
+    $flag->flag('unflag', $gid, user_load($users), TRUE);
+  }
+  drupal_set_message('The selected users has unfollow this group successfully.');
+
+}
+
+
+/*function comment_node_custom_submit($form, &$form_state) {
+  if(!empty($form_state['values']['subject'])){
+    $subject = $form_state['values']['subject'];
+  }else{
+    $subject = '';
+  }
+  $message = $form_state['values']['comment_body']['und'][0]['value'];
+
+  $nid = $form_state['values']['nid'];
+  $node_obj = node_load($nid);
+  global $user;
+  if(!empty($node_obj->og_group_ref)){
+    $group_id = $node_obj->og_group_ref['und'][0]['target_id'];
+    $query = db_select('users', 'u');
+    $query->fields('u', array('uid'));
+    $query->leftJoin('og_membership', 'og', 'u.uid = og.etid');
+    $query->condition('og.entity_type', 'user', '=');
+    $query->condition('og.group_type', 'node', '=');
+    $query->condition('og.state', 1, '=');
+    $query->condition('og.etid', $user->uid, '<>');
+    $query->condition('og.gid', $group_id, '=');
+    $query = $query->execute();
+    $query = $query->fetchAll();
+
+    if(!empty($query)){
+      foreach($query as $subquery){
+        _send_comment_save_mail($nid,$subquery->uid,$subject,$message);
+      }
+    }
+ }
+
+}
+*/
+
+
+/**
+ * Callback function for send comment save mail.
+ */
+/*function _send_comment_save_mail($nid,$user_id,$subject,$message) {
+  $user_obj = user_load($user_id);
+  $node_obj = node_load($nid);
+  $alias = drupal_get_path_alias('node/'.$nid);
+  global $user;
+  $my_module = '';
+  $my_mail_token = '';
+
+  $mailsubject = "New comment in Women's Bar Association Forum";
+  $body = 'Hi '.$user_obj->name.'<br/><br/>';
+  $body .= 'There is a new comment called "'.$subject.'" that belongs to a forum that you are following.<br/><br/>';
+  $body .= 'Post--------------------------------------------------------------------<br/>';
+  $body .= 'Author: '.$user->name.'<br/>';
+  $body .= 'Created on: '.date('M j Y, H:i',time()).'<br/>';
+  $body .= 'Title: '.$subject.'<br/>';
+  $body .= '--------------------------------------------------------------------<br/>';
+  $body .= $message.'<br/>';
+  $body .= '--------------------------------------------------------------------<br/><br/>';
+  $body .= 'To reply to this post or see the full conversation, click on this link:<br/>';
+  $body .= 'https://wbawbf.org/?q='.$alias.'<br/><br/>';
+  $body .= 'https://wbawbf.org';
+
+  $from = $user->mail;
+
+  $mail_message = array(
+    'to' => $user_obj->mail,
+    'subject' => $mailsubject,
+    'body' => $body,
+    'headers' => array(
+    'From' => $from,
+    'Return-Path' => $from,
+    'MIME-Version' => '1.0',
+    'Content-Type' => 'text/html;charset=utf-8',),
+  );
+  $system = drupal_mail_system($my_module, $my_mail_token);
+  if ($system->mail($mail_message)) {
+    //drupal_set_message(t("mail sent"));
+  }
+}*/
+
+

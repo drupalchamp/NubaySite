@@ -208,7 +208,7 @@ class CRM_Activity_Page_AJAX {
     foreach ($caseRelationships as $key => &$row) {
       $typeLabel = $row['relation'];
       // Add "<br />(Case Manager)" to label
-      if ($row['relation_type'] == $managerRoleId) {
+      if (!empty($row['relation_type']) && $row['relation_type'] == $managerRoleId) {
         $row['relation'] .= '<br />' . '(' . ts('Case Manager') . ')';
       }
       // view user links
@@ -361,8 +361,8 @@ class CRM_Activity_Page_AJAX {
       CRM_Activity_BAO_ActivityContact::create($targ_params);
     }
 
-    // typically this will be empty, since assignees on another case may be completely different
-    $assigneeContacts = array();
+    //CRM-21114 retrieve assignee contacts from original case; allow overriding from params
+    $assigneeContacts = CRM_Activity_BAO_ActivityContact::retrieveContactIdsByActivityId($params['activityID'], $assigneeID);
     if (!empty($params['assigneeContactIds'])) {
       $assigneeContacts = array_unique(explode(',', $params['assigneeContactIds']));
     }
@@ -381,10 +381,11 @@ class CRM_Activity_Page_AJAX {
     $caseActivity->activity_id = $mainActivityId;
     $caseActivity->save();
     $error_msg = $caseActivity->_lastError;
-    $caseActivity->free();
 
     $params['mainActivityId'] = $mainActivityId;
     CRM_Activity_BAO_Activity::copyExtendedActivityData($params);
+    CRM_Utils_Hook::post('create', 'CaseActivity', $caseActivity->id, $caseActivity);
+    $caseActivity->free();
 
     return (array('error_msg' => $error_msg, 'newId' => $mainActivity->id));
   }

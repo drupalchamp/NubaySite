@@ -703,8 +703,8 @@ WHERE  id = %1";
     }
     if ($priceSetID) {
       $priceFields = self::filterPriceFieldsFromParams($priceSetID, $params);
-      if (count($priceFields) == 1 && !empty($params['total_amount'])) {
-        $amount_override = $params['total_amount'];
+      if (count($priceFields) == 1) {
+        $amount_override = CRM_Utils_Array::value('partial_payment_total', $params, CRM_Utils_Array::value('total_amount', $params));
       }
     }
     foreach ($fields as $id => $field) {
@@ -719,7 +719,7 @@ WHERE  id = %1";
         case 'Text':
           $firstOption = reset($field['options']);
           $params["price_{$id}"] = array($firstOption['id'] => $params["price_{$id}"]);
-          CRM_Price_BAO_LineItem::format($id, $params, $field, $lineItem);
+          CRM_Price_BAO_LineItem::format($id, $params, $field, $lineItem, CRM_Utils_Array::value('partial_payment_total', $params));
           $optionValueId = key($field['options']);
 
           if (CRM_Utils_Array::value('name', $field['options'][$optionValueId]) == 'contribution_amount') {
@@ -767,7 +767,7 @@ WHERE  id = %1";
           $params["price_{$id}"] = array($params["price_{$id}"] => 1);
           $optionValueId = CRM_Utils_Array::key(1, $params["price_{$id}"]);
 
-          CRM_Price_BAO_LineItem::format($id, $params, $field, $lineItem);
+          CRM_Price_BAO_LineItem::format($id, $params, $field, $lineItem, CRM_Utils_Array::value('partial_payment_total', $params));
           if (CRM_Utils_Array::value('tax_rate', $field['options'][$optionValueId])) {
             $lineItem = self::setLineItem($field, $lineItem, $optionValueId, $totalTax);
           }
@@ -783,7 +783,7 @@ WHERE  id = %1";
 
         case 'CheckBox':
 
-          CRM_Price_BAO_LineItem::format($id, $params, $field, $lineItem);
+          CRM_Price_BAO_LineItem::format($id, $params, $field, $lineItem, CRM_Utils_Array::value('partial_payment_total', $params));
           foreach ($params["price_{$id}"] as $optionId => $option) {
             if (CRM_Utils_Array::value('tax_rate', $field['options'][$optionId])) {
               $lineItem = self::setLineItem($field, $lineItem, $optionId, $totalTax);
@@ -1033,6 +1033,11 @@ WHERE  id = %1";
       $adminFieldVisible = TRUE;
     }
 
+    $hideAdminValues = TRUE;
+    if (CRM_Core_Permission::check('edit contributions')) {
+      $hideAdminValues = FALSE;
+    }
+
     foreach ($feeBlock as $id => $field) {
       if (CRM_Utils_Array::value('visibility', $field) == 'public' ||
         (CRM_Utils_Array::value('visibility', $field) == 'admin' && $adminFieldVisible == TRUE) ||
@@ -1046,8 +1051,18 @@ WHERE  id = %1";
             $form->assign('ispricelifetime', TRUE);
           }
         }
+
+        $formClasses = array('CRM_Contribute_Form_Contribution', 'CRM_Member_Form_Membership');
+
         if (!is_array($options) || !in_array($id, $validPriceFieldIds)) {
           continue;
+        }
+        elseif ($hideAdminValues && !in_array($className, $formClasses)) {
+          foreach ($options as $key => $currentOption) {
+            if ($currentOption['visibility_id'] == CRM_Price_BAO_PriceField::getVisibilityOptionID('admin')) {
+              unset($options[$key]);
+            }
+          }
         }
         if (!empty($options)) {
           CRM_Price_BAO_PriceField::addQuickFormElement($form,

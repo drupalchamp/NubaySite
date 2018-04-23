@@ -21,7 +21,7 @@ function nubay_cta_block_node_info() {
     'cta_block' => array(
       'name' => t('CTA Block'),
       'base' => 'node_content',
-      'description' => t('"Call to Action" block presented as a clickable block or with clickable text.'),
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('CTA Title'),
       'help' => '',

@@ -1,0 +1,22 @@
+<?php
+function client_financial_info_form_alter(&$form, &$form_state, $form_id){
+
+ if($form_id == 'webform_client_form_1437'){
+   drupal_add_css(drupal_get_path('module', 'client_financial_info') . '/css/client_financial_info.css');
+   drupal_add_js(drupal_get_path('module', 'client_financial_info') . '/js/client_financial_info.js');
+ }
+
+ if($form_id =='webform_client_form_1325'){
+   drupal_add_js(drupal_get_path('module', 'client_financial_info') . '/js/flpi_financial_info.js');
+ }
+
+ if($form_id == 'webform_client_form_1444'){
+   drupal_add_js(drupal_get_path('module', 'client_financial_info') . '/js/flpi_financial_info.js');
+ }
+
+if($form_id == 'webform_client_form_1649'){
+   drupal_add_js(drupal_get_path('module', 'client_financial_info') . '/js/flpi_financial_info.js');
+ }
+
+
+}

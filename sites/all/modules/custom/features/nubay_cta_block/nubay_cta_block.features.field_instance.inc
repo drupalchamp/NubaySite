@@ -45,75 +45,7 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_spectrum_widget',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-cta_block-field_background_image'.
-  $field_instances['node-cta_block-field_background_image'] = array(
-    'bundle' => 'cta_block',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'focal_point_scale___crop',
-        ),
-        'type' => 'image',
-        'weight' => 19,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
-    'field_name' => 'field_background_image',
-    'label' => 'Background image',
-    'readmore_behaviour' => 'default',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
-          'upload' => 0,
-        ),
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 21,
+      'weight' => 11,
     ),
   );
 
@@ -155,7 +87,7 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -197,7 +129,7 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -236,7 +168,7 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_spectrum_widget',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -244,20 +176,17 @@ function nubay_cta_block_field_default_field_instances() {
   $field_instances['node-cta_block-field_border_radius'] = array(
     'bundle' => 'cta_block',
     'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 21,
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -267,24 +196,18 @@ function nubay_cta_block_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_border_radius',
-    'label' => 'Border_radius',
-    'readmore_behaviour' => 'default',
+    'label' => 'Border radius',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'number',
-      'weight' => 13,
+      'type' => 'options_select',
+      'weight' => 14,
     ),
   );
 
@@ -326,23 +249,23 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
-  // Exported field_instance: 'node-cta_block-field_cta_block_padding_right'.
-  $field_instances['node-cta_block-field_cta_block_padding_right'] = array(
+  // Exported field_instance: 'node-cta_block-field_cta_block_padding_bottom'.
+  $field_instances['node-cta_block-field_cta_block_padding_bottom'] = array(
     'bundle' => 'cta_block',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter only integer number like as 0,1,5,10',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -352,10 +275,88 @@ function nubay_cta_block_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_cta_block_padding_bottom',
+    'label' => 'Cta block padding bottom',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'node-cta_block-field_cta_block_padding_left'.
+  $field_instances['node-cta_block-field_cta_block_padding_left'] = array(
+    'bundle' => 'cta_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter only integer value like as 0,1,5,10',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cta_block_padding_left',
+    'label' => 'Cta block padding left',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-cta_block-field_cta_block_padding_right'.
+  $field_instances['node-cta_block-field_cta_block_padding_right'] = array(
+    'bundle' => 'cta_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter only integer value like as 0,1,5,10',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
     'field_name' => 'field_cta_block_padding_right',
     'label' => 'Cta block padding right',
-    'readmore_behaviour' => 'default',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -377,14 +378,14 @@ function nubay_cta_block_field_default_field_instances() {
     'bundle' => 'cta_block',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter only integer value like as 0,1,5,10',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -394,10 +395,8 @@ function nubay_cta_block_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_cta_block_padding_top',
     'label' => 'Cta block padding top',
-    'readmore_behaviour' => 'default',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -452,48 +451,7 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-cta_block-field_hide_title'.
-  $field_instances['node-cta_block-field_hide_title'] = array(
-    'bundle' => 'cta_block',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 20,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
-    'field_name' => 'field_hide_title',
-    'label' => 'Hide title',
-    'readmore_behaviour' => 'default',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 1,
+      'weight' => 6,
     ),
   );
 
@@ -552,7 +510,7 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -593,7 +551,7 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -632,7 +590,7 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_spectrum_widget',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -674,7 +632,7 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -716,7 +674,85 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-cta_block-field_title_align'.
+  $field_instances['node-cta_block-field_title_align'] = array(
+    'bundle' => 'cta_block',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_title_align',
+    'label' => 'Text Align',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-cta_block-field_title_font_weight'.
+  $field_instances['node-cta_block-field_title_font_weight'] = array(
+    'bundle' => 'cta_block',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_title_font_weight',
+    'label' => 'Title Font weight',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
@@ -755,7 +791,7 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_spectrum_widget',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -797,7 +833,7 @@ function nubay_cta_block_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -838,29 +874,33 @@ function nubay_cta_block_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Background Color');
-  t('Background image');
   t('Block height');
   t('Block width');
   t('Border color');
+  t('Border radius');
   t('Border width');
-  t('Border_radius');
+  t('Cta block padding bottom');
+  t('Cta block padding left');
   t('Cta block padding right');
   t('Cta block padding top');
+  t('Enter only integer number like as 0,1,5,10');
+  t('Enter only integer value like as 0,1,5,10');
   t('Enter the full URL with http:// or https://');
-  t('Hide title');
   t('Link Destination');
   t('Link Font typeface');
   t('Link Text');
   t('Link Text color');
   t('Link Text size');
   t('Padding(from outer edge of block)');
+  t('Text Align');
+  t('Title Font weight');
   t('Title Text Font color');
   t('Title Text Font size');
   t('Title Text Font typeface');

@@ -1,0 +1,15 @@
+Step 1:
+========
+
+If extensions directory is not setup already, Create and set your extensions directory in CiviCRM at:
+
+http://example.com/civicrm/admin/setting/path?reset=1
+
+See below URL for full instructions and information on how to set and configure extensions:
+
+http://wiki.civicrm.org/confluence/display/CRMDOC/Extensions
+
+Step 2:
+========
+
+Copy 'Contributions Over Certain Total Amount' to the extension directory and install the extension.

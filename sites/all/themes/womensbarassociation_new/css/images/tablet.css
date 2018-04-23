@@ -1,0 +1,877 @@
+@media only screen and (min-width:768px) and (max-width:979px){
+
+#front_whole_wrapper{
+width:100%;
+margin:auto;
+}
+p {
+    line-height: 24px !important;
+    margin: 0 0 10px;
+}
+#main_contant{
+width:100%;
+margin:auto;
+height:auto;
+}
+#landing_page_banner img{
+width:100%;
+height:auto;
+}
+#landing_page_banner .landing_page_banner_intro_text {
+padding-left: 4%;
+padding-right: 4%;
+}
+#block-block-11 ul li{
+margin-left:3%;
+padding-right:20px;
+}
+#whole_wrapper{
+width:100%;
+}
+#logo_area{
+width:250px;
+padding-left:2%;
+}
+
+#header_right{
+width:48%;
+padding-right:2%;
+}
+#menu_area .block-superfish .sf-menu li a {
+width:80px !important;
+padding:10px 0px !important;
+font-size:11px !important;
+margin-top:12px;
+line-height:15px;
+}
+
+#menu_area .block-superfish .menuparent li {
+width: 82px !important;
+top:2px !important;
+}
+#menu_area .block-superfish .sf-menu li#menu-841-3 a,
+#menu_area .block-superfish li#menu-841-3.menuparent li,
+#menu_area .block-superfish .sf-menu li#menu-812-2 a,
+#menu_area .block-superfish li#menu-812-2.menuparent li{
+width:140px !important;
+}
+#slide_show_area {
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;
+}
+.view-wbf-slide-show,
+.view-slide-show{
+width:100%;
+}
+.view-wbf-slide-show .image_box,
+.view-slide-show .image_box{
+width:98%;
+float:none;
+}
+.view-wbf-slide-show .image_box img,
+.view-slide-show .image_box img{
+width:100%;
+height:auto;
+}
+.view-wbf-slide-show .views-slideshow-cycle-main-frame-row,
+.view-slide-show .views-slideshow-cycle-main-frame-row,
+.view-wbf-slide-show .views-slideshow-cycle-main-frame,
+.view-slide-show .views-slideshow-cycle-main-frame{
+width:100% !important;
+}
+.view-wbf-slide-show .desc_box,
+.view-slide-show .desc_box{
+width:96%;
+float:none;
+padding-left:0px;
+padding-top:15px;
+}
+.view-wbf-slide-show .views-slideshow-controls-bottom,
+.view-slide-show .views-slideshow-controls-bottom{
+float: none;
+margin-top:7%;
+}
+#front_content_left{
+width:32%;
+float:left;
+margin-left:1%;
+}
+#front_content_middle{
+width:32%;
+float:left;
+}
+#block-views-wba-news-announcements-block,
+.wbf #front_content_left .block,
+#block-views-wbf-vimeo-video-block,
+#block-views-upcoming-event-block-1{
+padding:20px;
+}
+#block-block-8,
+#block-block-9{
+margin-left:15%;
+}
+.view-wbf-vimeo-video- .vimeo_video embed{
+width:100%;
+height:250px;
+}
+
+
+/*------------------------------------INNER PAGE--------------------------------------*/
+
+#whole_main_div,
+#midcontent{
+width:100%;
+overflow:hidden;
+}
+body.sidebar-second.page-node-74 #whole_main_div, #midcontent {
+   overflow: visible !important;
+}
+#sidebar_first {
+width:30%;
+margin-left:1%;
+}
+#sidebar_second{
+width:30%;
+float:right;
+margin-right:1%;
+}
+#sidebar_first .block{
+padding-left:15px;
+padding-right:15px;
+padding-top:20px;
+padding-bottom:20px;
+}
+#sidebar_first #block-block-33{
+padding-left:0px !important;
+padding-right:0px !important;
+font-size:13px !important;
+}
+
+body.sidebar-first #midcontent{
+width:65%;
+padding-left:10px;
+padding-right:10px;
+margin-left:0px;
+}
+body.sidebar-second #midcontent{
+width:68%;
+padding-left:10px;
+padding-right:10px;
+margin-left:1%;
+}
+
+body.two-sidebars #midcontent{
+width:34%;
+}
+#block-block-13 img{
+width:100%;
+}
+#sidebar_first .block h2.title {
+    font-size: 22px !important;
+    line-height: 30px !important;
+}
+
+body.sidebar-second.page-board-of-trustees #midcontent,
+body.sidebar-second.page-news-releases #midcontent,
+body.sidebar-second.page-legislative-achievements #midcontent,
+body.sidebar-second.page-legislative-priorities #midcontent,
+body.sidebar-second.page-member-benefits #midcontent,
+body.sidebar-second.page-areas-of-concern  #midcontent,
+body.sidebar-second.page-wba-directors #midcontent,
+body.sidebar-second.page-wba-staff #midcontent{
+width:33%;
+}
+body.page-node-9   #midcontent .field-name-body,
+body.page-node-385 #midcontent .field-name-body,
+body.page-node-23 #midcontent .field-name-body {
+ overflow: hidden;
+ width: 60%;
+}
+#mid_right{
+width:33%;
+}
+#block-block-35 img,
+#block-block-36 img {
+width: 100%;
+}
+#block-block-14{
+line-height:24px !important;
+font-size:14px !important;
+}
+#block-block-14 h2.title{
+font-size:22px !important;
+}
+#block-block-14 span{
+width:auto !important;
+}
+#block-block-14 ul li{
+	margin:0px !important;
+}
+#block-block-12 {
+    font-size: 14px !important;
+    line-height: 21px;
+}
+.view-wba-directors .all_board_of_directors,
+.view-wba-directors .all_emeritus_board,
+.view-wba-directors .all_president_area {
+width: 100%;
+float:none;
+}
+#editrow-custom_81 input{
+	width:auto !important;
+}
+.crm-container .crm-section .label {
+    text-align: justify !important;
+    width: 100% !important;
+}
+.crm-container .crm-section .content {
+    margin-left: 0 !important;
+}
+#crm-container.crm-public input[type="text"], #crm-container.crm-public input[type="password"], #crm-container.crm-public input[type="email"], #crm-container.crm-public select {
+    margin: auto !important;
+    width: 77% !important;
+}
+#crm-container.crm-public .calc-value, #crm-container.crm-public .content {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+table.form-layout-compressed tr {
+    width: 100% !important;
+}
+table.form-layout-compressed tr td {
+    width: 75% !important;
+}
+#editrow-gender_id  .content label,
+#editrow-custom_144 .content label,
+#editrow-custom_129 .content label{
+	font-size: 13px;
+    float:right;
+    width: 85% !important
+}
+#editrow-gender_id  .crm-form-radio,
+#editrow-custom_144 .crm-form-checkbox,
+#editrow-custom_129 .crm-form-checkbox{
+ float:left;
+ clear:both;
+}
+#node-103 table td {
+    float: left;
+    margin-left: 3%;
+    width: 47% !important;
+}
+#node-103 table td img{
+	width:67% !important;
+    height:auto !important;
+}
+.view .date-nav-wrapper .date-heading h3{
+	float:left;
+}
+.view .date-nav-wrapper .date-prev{
+	right:87px !important;
+}
+#webform-client-form-343 .webform-component--civicrm-1-contact-1-fieldset-fieldset--civicrm-1-contact-1-email-email  label{
+	display:block !important;
+}
+#webform-client-form-343 .email.civicrm-enabled.form-text.form-email {
+	width:60% !important;
+}
+#webform-client-form-343 .form-control {
+    width: 60% !important;
+}
+#webform-client-form-362 .webform-layout-box > .form-item input{
+	display:inline !important;
+}
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-phone-phone > label,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name > label,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-first-name > label{
+	display:block !important;
+ }
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name,
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-email-email {
+  margin-left: 0 !important;
+}
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-phone-phone,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-first-name {
+  width: 100% !important;
+}
+#webform-client-form-362 .form-item input {
+    margin-bottom: 1% !important;
+}
+#webform-client-form-362 .email.civicrm-enabled.form-text.form-email {
+    width: 94%;
+}
+#webform-client-form-362 .radio input[type="radio"]{
+	float:none !important;
+    margin:0px !important;
+}
+#webform-client-form-362 .form-control{
+	width:70% !important;
+ }
+#webform-client-form-362 .webform-component--civicrm-1-contact-1-cg14-custom-81.webform-container-inline{
+	display:inline !important;
+}
+.views-exposed-widget.views-submit-button {
+    text-align: right !important;
+    width: 75% !important;
+}
+body.page-forum-active .views-exposed-widget.views-submit-button {
+    text-align: right !important;
+    width: 10% !important;
+}
+.view-refferal-directory .views-reset-button {
+    float: right;
+    text-align: left;
+    width: 19% !important;
+}
+.views-exposed-form label{
+	width:auto !important;
+}
+.view-refferal-directory .form-item input, .view-refferal-directory .form-item select {
+  float: right;
+  height: 25px !important;
+  margin-right: 15px;
+  padding: 0 !important;
+  width: 250px;
+}
+#comment-form {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#comment-form .form-item.form-group input {
+    margin-bottom: 10px;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+	display:block !important
+  
+}
+#whole_main_div, #midcontent {
+    padding-left: 5px;
+}
+table.sticky-header{
+	display:none !important;
+}
+#node-90  .field-name-field-upload-image img,
+#node-89  .field-name-field-upload-image img,
+#node-267 .field-name-body img,
+#node-265 .field-name-body img,
+#node-264 .field-name-body img,
+#node-263 .field-name-body img,
+#node-262 .field-name-body img,
+#node-261 .field-name-body img,
+#node-259 .field-name-body img,
+#node-258 .field-name-body img,
+#node-104 .field-name-body img{
+	width:100% !important;
+    height:auto;
+}
+#node-209 .field-name-body img{
+width:73% !important;
+height:auto;
+}
+.view-board-of-trustees .all_trustees_area, .view-board-of-trustees .emeritus_board {
+    font-size: 13px !important;
+}
+.all_trustees_area {
+    width: 100% !important;
+}
+#node-66 .field-name-body p{
+text-align:center;
+}
+#block-views-committees-block-1 ul{
+font-size:13px !important;
+}
+.view-legislative-priorities .views-field-title,
+.view-legislative-achievements .views-field-title{
+font-size:19px !important;
+}
+#node-171 .field-name-body td {
+    float: left;
+    overflow: hidden !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+#node-171 .field-name-body .pat p{
+    text-align: center !important;
+}
+#crm-container.crm-public .price-set-row .crm-form-radio {
+    margin-right: 10px !important;
+    margin-top: 0 !important;
+}
+.payment_processor-section .crm-form-radio {
+    clear: both;
+    float: left;
+}
+.payment_processor-section .content label {
+    float: right !important;
+    width: 90% !important;
+}
+.membership {
+    margin-left: -25px;
+}
+
+.membership table tr td {
+    display: block;
+    float: left;
+    font-size: 11px;
+    height: 62px;
+    overflow: hidden;
+    text-align: center;
+    width: 78px;
+}
+.membership table tr th {
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 49px;
+    overflow: scroll !important;
+    padding-left: 10px;
+    padding-right: 5px;
+    text-align: center;
+    width: 78px;
+}
+.membership table tr:last-child td {
+    width: 100% !important;
+}
+
+/*------------------------------------INNER PAGE CLOSED--------------------------------------*/
+
+}
+
+@media only screen and (min-width:980px) and (max-width:1200px){
+
+#front_whole_wrapper{
+width:100%;
+margin:auto;
+}
+p {
+    line-height: 24px !important;
+    margin: 0 0 10px;
+}
+body.sidebar-second.page-node-74 #whole_main_div, #midcontent {
+   overflow: visible !important;
+}
+#main_contant{
+width:100%;
+margin:auto;
+height:auto;
+}
+#landing_page_banner img{
+width:100%;
+height:auto;
+}
+#landing_page_banner .landing_page_banner_intro_text {
+padding-left: 4%;
+padding-right: 4%;
+}
+#block-block-11 ul li{
+margin-left:3%;
+padding-right:20px;
+}
+#whole_wrapper{
+width:100%;
+}
+#logo_area{
+width:350px;
+padding-left:2%;
+}
+#header_right{
+width:48%;
+padding-right:2%;
+}
+#menu_area .block-superfish .sf-menu li a {
+width:100px !important;
+padding:10px 0px !important;
+margin-top:12px;
+line-height:15px;
+}
+
+#menu_area .block-superfish .menuparent li {
+width: 100px !important;
+top:2px !important;
+}
+#menu_area .block-superfish .sf-menu li#menu-841-3 a,
+#menu_area .block-superfish li#menu-841-3.menuparent li,
+#menu_area .block-superfish .sf-menu li#menu-812-2 a,
+#menu_area .block-superfish li#menu-812-2.menuparent li{
+width:140px !important;
+}
+#slide_show_area {
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;
+}
+.view-wbf-slide-show,
+.view-slide-show{
+width:100%;
+}
+.view-wbf-slide-show .image_box,
+.view-slide-show .image_box{
+width:98%;
+float:none;
+}
+.view-wbf-slide-show .image_box img,
+.view-slide-show .image_box img{
+width:100%;
+height:auto;
+}
+.view-wbf-slide-show .views-slideshow-cycle-main-frame-row,
+.view-slide-show .views-slideshow-cycle-main-frame-row,
+.view-wbf-slide-show .views-slideshow-cycle-main-frame,
+.view-slide-show .views-slideshow-cycle-main-frame{
+width:100% !important;
+}
+.view-wbf-slide-show .desc_box,
+.view-slide-show .desc_box{
+width:96%;
+float:none;
+padding-left:0px;
+padding-top:15px;
+}
+.view-wbf-slide-show .views-slideshow-controls-bottom,
+.view-slide-show .views-slideshow-controls-bottom{
+float: none;
+margin-top:7%;
+}
+#front_content_left{
+width:32%;
+float:left;
+margin-left:1%;
+}
+#front_content_middle{
+width:32%;
+float:left;
+}
+#sidebar_second{
+width:32%;
+float:right;
+margin-right:1%;
+}
+#block-views-wba-news-announcements-block,
+.wbf #front_content_left .block,
+#block-views-wbf-vimeo-video-block,
+#block-views-upcoming-event-block-1{
+padding:20px;
+}
+#block-block-8,
+#block-block-9{
+margin-left:15%;
+}
+.view-wbf-vimeo-video- .vimeo_video embed{
+width:100%;
+height:250px;
+}
+
+
+
+/*------------------------------------INNER PAGE--------------------------------------*/
+
+#whole_main_div,
+#midcontent{
+width:100%;
+overflow:hidden;
+}
+#sidebar_first {
+width:30%;
+margin-left:1%;
+}
+#sidebar_second{
+width:30%;
+float:right;
+margin-right:1%;
+}
+#sidebar_first .block{
+padding-left:15px;
+padding-right:15px;
+padding-top:20px;
+padding-bottom:20px;
+}
+#sidebar_first #block-block-33{
+padding-left:0px !important;
+padding-right:0px !important;
+font-size:13px !important;
+}
+
+body.sidebar-first #midcontent{
+width:65%;
+padding-left:10px;
+padding-right:10px;
+margin-left:0px;
+}
+body.sidebar-second #midcontent{
+width:68%;
+padding-left:10px;
+padding-right:10px;
+margin-left:1%;
+}
+
+body.two-sidebars #midcontent{
+width:34%;
+}
+#block-block-13 img{
+width:100%;
+}
+#sidebar_first .block h2.title {
+    font-size: 22px !important;
+    line-height: 30px !important;
+}
+body.sidebar-second.page-board-of-trustees #midcontent,
+body.sidebar-second.page-news-releases #midcontent,
+body.sidebar-second.page-legislative-achievements #midcontent,
+body.sidebar-second.page-legislative-priorities #midcontent,
+body.sidebar-second.page-member-benefits #midcontent,
+body.sidebar-second.page-areas-of-concern #midcontent,
+body.sidebar-second.page-wba-directors #midcontent,
+body.sidebar-second.page-wba-staff #midcontent{
+width:33%;
+}
+#mid_right{
+width:33%;
+}
+#block-block-14 span{
+width:auto !important;
+}
+#node-90  .field-name-field-upload-image img,
+#node-89  .field-name-field-upload-image img,
+#node-267 .field-name-body img,
+#node-265 .field-name-body img,
+#node-264 .field-name-body img,
+#node-263 .field-name-body img,
+#node-262 .field-name-body img,
+#node-261 .field-name-body img,
+#node-259 .field-name-body img,
+#node-258 .field-name-body img,
+#node-104 .field-name-body img,
+#node-268 .field-name-body img{
+	width:100% !important;
+    height:auto;
+}
+.view-board-of-trustees .all_trustees_area, .view-board-of-trustees .emeritus_board {
+    font-size: 13px !important;
+}
+.view-board-of-trustees .all_trustees_area, .view-board-of-trustees .emeritus_board {
+    float: left;
+    width: 48%;
+}
+.all_trustees_area {
+    width: 100% !important;
+}
+#node-66 .field-name-body p{
+text-align:center;
+}
+#block-block-14 {
+line-height:24px !important;
+font-size:14px !important;
+}
+#block-views-committees-block-1 ul{
+font-size:13px !important;
+}
+#block-block-14 ul li{
+	margin:0px !important;
+}
+#block-block-35 img,
+#block-block-36 img {
+width: 100%;
+ height:auto !important;
+
+}
+.view-wba-directors .all_board_of_directors,
+.view-wba-directors .all_emeritus_board,
+.view-wba-directors .all_president_area {
+width: 100%;
+float:none;
+}
+#editrow-custom_81 .content {
+    margin-left: 258px !important;
+}
+.crm-container table.form-layout-compressed input,
+.crm-section.is_for_organization-section input,
+#crm-container.crm-public .price-set-row input,
+#editrow-custom_81 input{
+	width:auto !important;
+}
+#editrow-custom_63 .content {
+    margin-left: 225px !important;
+}
+#editrow-custom_144 .content,
+#editrow-gender_id .content,
+#editrow-custom_129 .content {
+    margin-left: 183px !important;
+}
+#editrow-custom_144 .label,
+#editrow-custom_63 .label,
+#editrow-custom_71 .label{
+	white-space:normal !important;
+}
+#editrow-custom_144 .content{
+	margin-top:10px !important;
+}
+#crm-submit-buttons input,
+.crm-container table.form-layout-compressed input,
+.crm-section.is_for_organization-section input,
+#crm-container.crm-public .price-set-row input,
+#editrow-custom_81 input{
+	width:auto !important;
+}
+
+.crm-container input, #civicrm-menu input {
+    box-sizing: content-box !important;
+    width: 250px !important;
+}
+.select2-container, .select2-drop, .select2-search, .select2-search input {
+    box-sizing: border-box;
+    width: 250px !important;
+}
+.crm-container .crm-section .content {
+    margin-left: 226px !important;
+}
+#node-103 table td {
+    float: left;
+    margin-left: 3%;
+    width: 47% !important;
+}
+#node-103 table td img{
+	width:67% !important;
+}
+
+#editrow-gender_id  .content label,
+#editrow-custom_144 .content label,
+#editrow-custom_129 .content label{
+	font-size: 13px;
+    float:right;
+    margin: 5px 0px;
+    width: 75% !important
+}
+#editrow-gender_id  .crm-form-radio,
+#editrow-custom_144 .crm-form-checkbox,
+#editrow-custom_129 .crm-form-checkbox{
+ margin: 8px 0px;
+ width: 22% !important;
+}
+#editrow-custom_63 .label,
+#editrow-custom_71 .label{
+	white-space:normal !important;
+}
+.view .date-nav-wrapper .date-heading h3{
+	float:left;
+}
+.view .date-nav-wrapper .date-prev{
+	right:87px !important;
+}
+#webform-client-form-343 .email.civicrm-enabled.form-text.form-email {
+	width:60% !important;
+}
+#webform-client-form-343 .form-control {
+    width: 60% !important;
+}
+#webform-client-form-362 .webform-layout-box > .form-item input{
+	display:inline !important;
+}
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-phone-phone > label,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name > label,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-first-name > label{
+	display:block !important;
+ }
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name,
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-email-email {
+  margin-left: 0 !important;
+}
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-phone-phone,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name,
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-first-name {
+  width: 100% !important;
+}
+#webform-client-form-362 .form-item input {
+    margin-bottom: 2% !important;
+}
+#webform-client-form-362 .webform-component--contact-info--civicrm-1-contact-1-phone-phone label
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-last-name  label
+#webform-client-form-362 .webform-component--name--civicrm-1-contact-1-contact-first-name label{
+    margin-bottom: 1% !important;
+    display:block;
+}
+#webform-client-form-362 .email.civicrm-enabled.form-text.form-email {
+    width: 94%;
+}
+#webform-client-form-362 .radio input[type="radio"]{
+	float:none !important;
+    margin:0px !important;
+}
+#webform-client-form-362 .form-control{
+	width:70% !important;
+ }
+ #comment-form {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#comment-form .form-item.form-group input {
+    margin-bottom: 10px;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+	display:block !important
+  
+}
+#whole_main_div, #midcontent {
+    padding-left: 5px;
+}
+table.sticky-header{
+	display:none !important;
+}
+.view-refferal-directory .views-submit-button {
+    float: left;
+    text-align: right;
+    width: 54% !important;
+}
+.view-refferal-directory .views-reset-button {
+    float: right !important;
+    width: 45% !important;
+}
+.crm-section.payment_processor-section input {
+    width: auto !important;
+}
+#crm-container.crm-public .price-set-row .crm-form-radio {
+    margin-right: 10px !important;
+    margin-top: 0 !important;
+}
+.membership {
+    margin-left: -25px;
+}
+
+.membership table tr td {
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 62px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 5px;
+    text-align: center;
+    width: 107px ;
+}
+.membership table tr th {
+    display: block;
+    float: left;
+    font-size: 13px;
+    height: 49px;
+    overflow: scroll !important;
+    padding-left: 10px;
+    padding-right: 5px;
+    text-align: center;
+    width: 102px;
+}
+.membership table tr:last-child td {
+    width: 100% !important;
+}
+.membership table td.col2 {
+    width: 117px !important;
+}
+.membership table  td.col3{
+    width: 50px !important;
+}
+.membership table td.col1 {
+    width: 132px !important;
+}
+
+/*------------------------------------INNER PAGE CLOSED--------------------------------------*/
+
+
+}

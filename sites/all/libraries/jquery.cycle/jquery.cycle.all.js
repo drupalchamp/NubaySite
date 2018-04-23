@@ -1,8 +1,8 @@
 /*!
  * jQuery Cycle Plugin (with Transition Definitions)
  * Examples and documentation at: http://jquery.malsup.com/cycle/
- * Copyright (c) 2007-2013 M. Alsup
- * Version: 3.0.3 (11-JUL-2013)
+ * Copyright (c) 2007-2012 M. Alsup
+ * Version: 2.9999.81 (15-JAN-2013)
  * Dual licensed under the MIT and GPL licenses.
  * http://jquery.malsup.com/license.html
  * Requires: jQuery v1.7.1 or later
@@ -10,14 +10,13 @@
 ;(function($, undefined) {
 "use strict";
 
-var ver = '3.0.3';
+var ver = '2.9999.81';
 
 function debug(s) {
 	if ($.fn.cycle.debug)
 		log(s);
 }		
 function log() {
-	/*global console */
 	if (window.console && console.log)
 		console.log('[cycle] ' + Array.prototype.join.call(arguments,' '));
 }
@@ -148,8 +147,6 @@ function handleArguments(cont, options, arg2) {
 				log('options not found, "prev/next" ignored');
 				return false;
 			}
-			if (typeof arg2 == 'string') 
-				opts.oneTimeFx = arg2;
 			$.fn.cycle[options](opts);
 			return false;
 		default:
@@ -359,7 +356,7 @@ function buildOptions($cont, $slides, els, options, o) {
 	}
 		
 	// stretch container
-	var reshape = (opts.containerResize || opts.containerResizeHeight) && $cont.innerHeight() < 1;
+	var reshape = (opts.containerResize || opts.containerResizeHeight) && !$cont.innerHeight();
 	if (reshape) { // do this only if container has no size http://tinyurl.com/da2oa9
 		var maxw = 0, maxh = 0;
 		for(var j=0; j < els.length; j++) {
@@ -964,7 +961,7 @@ $.fn.cycle.commonReset = function(curr,next,opts,w,h,rev) {
 // the actual fn for effecting a transition
 $.fn.cycle.custom = function(curr, next, opts, cb, fwd, speedOverride) {
 	var $l = $(curr), $n = $(next);
-	var speedIn = opts.speedIn, speedOut = opts.speedOut, easeIn = opts.easeIn, easeOut = opts.easeOut, animInDelay = opts.animInDelay, animOutDelay = opts.animOutDelay;
+	var speedIn = opts.speedIn, speedOut = opts.speedOut, easeIn = opts.easeIn, easeOut = opts.easeOut;
 	$n.css(opts.cssBefore);
 	if (speedOverride) {
 		if (typeof speedOverride == 'number')
@@ -974,11 +971,11 @@ $.fn.cycle.custom = function(curr, next, opts, cb, fwd, speedOverride) {
 		easeIn = easeOut = null;
 	}
 	var fn = function() {
-		$n.delay(animInDelay).animate(opts.animIn, speedIn, easeIn, function() {
+		$n.animate(opts.animIn, speedIn, easeIn, function() {
 			cb();
 		});
 	};
-	$l.delay(animOutDelay).animate(opts.animOut, speedOut, easeOut, function() {
+	$l.animate(opts.animOut, speedOut, easeOut, function() {
 		$l.css(opts.cssAfter);
 		if (!opts.sync) 
 			fn();
@@ -1008,9 +1005,7 @@ $.fn.cycle.defaults = {
     after:            null,     // transition callback (scope set to element that was shown):  function(currSlideElement, nextSlideElement, options, forwardFlag)
     allowPagerClickBubble: false, // allows or prevents click event on pager anchors from bubbling
     animIn:           null,     // properties that define how the slide animates in
-    animInDelay:      0,        // allows delay before next slide transitions in	
     animOut:          null,     // properties that define how the slide animates out
-    animOutDelay:     0,        // allows delay before current slide transitions out
     aspect:           false,    // preserve aspect ratio during fit resizing, cropping if necessary (must be used with fit option)
     autostop:         0,        // true to end slideshow after X transitions (where X == slide count)
     autostopCount:    0,        // number of transitions (optionally used with autostop to define X)
