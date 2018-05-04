@@ -1882,3 +1882,31 @@ body.page-wba-staff .view-wba-staff h2 {
 body.page-wba-staff .view-wba-staff li{
     margin-bottom: 50px;
 }
+
+.landing_box{
+	max-width:1135px;
+	margin:auto;
+	overflow:hidden;
+	font-size:18px;
+	line-height: 23px;
+	color:#ffffff;
+}
+.landing_box .wba_box{
+	width:48%;
+	float:left;
+	text-align:center;
+}
+.landing_box .wbf_box{
+	width:48%;
+	float:right;
+	text-align:center;
+}
+.landing_box .image_box{
+	height:223px;
+	margin-bottom:25px;
+	text-align:center;
+	overflow:hidden;
+}
+.landing_box .wbflogo img{
+	margin-top:55px;
+}
